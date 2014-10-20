@@ -1,7 +1,7 @@
 annotatedsql-projection-plugin
 ==============================
 
-Plugin for annotatedsql. Generate projections and uri 
+Plugin for annotatedsql [Android-AnnotatedSQL][1]. Generate projections and uri 
 
 Easy way to generate projection and columns indexes for it.
 Just add @Projection to your @Table and get class with all necessary data in Projections class
@@ -30,3 +30,25 @@ Result: inner class in Projections
             public static final int INDEX_TEXT = 1;
         }
     }
+
+*How to add to your project?*
+----------------
+Very easy way - just use [aptlibs][2] 
+
+	aptlibs {
+
+		annotatedSql {
+			version = "${asVersion}"
+			logLevel = 'INFO'
+			plugins {
+				projectionPlugin{
+					version = '1.0.+'
+					dependencies = ["com.github.hamsterksu:projection-plugin-api:${version}", "com.github.hamsterksu:projection-plugin-processor:${version}"]
+					plugin = "com.hamsterksu.asql.projections.ProjectionPlugin"
+				}
+			}
+		}
+	}
+
+  [1]: https://github.com/hamsterksu/Android-AnnotatedSQL
+  [2]: https://github.com/hamsterksu/android-aptlibs-gradle-plugin
