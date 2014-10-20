@@ -1,0 +1,24 @@
+subprojects {
+
+    sourceCompatibility = 1.7
+    group = 'com.github.hamsterksu'
+    version = '1.0.0'
+
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    repositories {
+        mavenCentral()
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDir 'src'
+            }
+            resources {
+                srcDir 'res'
+            }
+        }
+    }
+}

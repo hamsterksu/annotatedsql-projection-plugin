@@ -1,0 +1,2 @@
+include ':projection-plugin-api'
+include ':projection-plugin-processor'

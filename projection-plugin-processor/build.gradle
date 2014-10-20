@@ -1,0 +1,9 @@
+dependencies {
+    compile project(':projection-plugin-api')
+    compile 'com.github.hamsterksu:android-annotatedsql-api:1.10.+'
+    compile 'com.github.hamsterksu:android-annotatedsql-processor:1.10.+'
+    compile 'org.freemarker:freemarker:2.3.20'
+    compile 'com.google.guava:guava:16.0.1'
+    compile 'commons-lang:commons-lang:2.6'
+    compile files("${System.properties['java.home']}/../lib/tools.jar")
+}
